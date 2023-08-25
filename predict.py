@@ -29,7 +29,7 @@ with open('data/vocab.pkl', 'rb') as fobj_read:
     fobj_read.close()
 
 context = [ENCODER[tuple(t)] for t in ldat[-block_size:]]  # use the last block_size tokens to predict next
-model = LottoGPT.load_from_checkpoint("models/mdl032/version_0/checkpoints/epoch=20-step=756.ckpt")
+model = LottoGPT.load_from_checkpoint("models/mdl032/version_0/checkpoints/epoch=100-step=3636.ckpt")
 # model.freeze()
 model.eval()
 with torch.no_grad():
@@ -38,4 +38,4 @@ with torch.no_grad():
     probs = F.softmax(probs, dim=-1)  # torch.Size([1, 1, 5504])
 h_tokens = highest_probability_tokens(probs, n_tokens=n_toks)
 seqs_032 = [DECODER[n] for n in h_tokens]
-print(seqs_032)  # [(4, 7, 11), (1, 12, 18)]
+print(seqs_032)  # [(12, 14, 15), (5, 7, 19)]

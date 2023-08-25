@@ -161,3 +161,6 @@ cython_debug/
 
 # other
 models/
+images/
+testing_gif_generator.py
+

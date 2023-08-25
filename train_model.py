@@ -46,7 +46,7 @@ csv_logger = pl_loggers.CSVLogger(save_dir="models",
                                   prefix="", 
                                   flush_logs_every_n_steps=100)
 # trainer = pl.Trainer(max_epochs=1, accelerator='cpu', devices=1)
-trainer = pl.Trainer(max_epochs=21, 
+trainer = pl.Trainer(max_epochs=101, 
                      accelerator='gpu', 
                      devices=1, 
                      logger=csv_logger)
