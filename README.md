@@ -1,6 +1,8 @@
 # lottogpt
 fork of [nanoGPT](https://github.com/karpathy/nanoGPT) to generate next lottery sequence.
 
+In the animation below, the blue line is the probability for each sequence or `token` in the vocabulayr predicted by the trained model given some context or previous sequences (referred to as `block_size`). The circles illustrate the actual winning sequence for a given drawing. If the line and the circles are vertically aligned, then the model has predicted the winning sequence correctly. As seen below, this is not the case. Maybe more training? more context? more heads and/or layers in the transformer? Increased embedding dimension? Could additional hyper-parameter testing predict the lottery? Probably not, but it is fun to try and learn something from it!
+
 ![](lotto_gpt.gif)
 
 It is best to get started by understanding nanoGPT first by watching [youtube - Andrej Karpathy - Let's build GPT: from scratch, in code, spelled out. ](https://www.youtube.com/watch?v=kCc8FmEb1nY).
